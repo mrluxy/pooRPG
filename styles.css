@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto');
+
+@keyframes slide-in-right{0%{transform:translateX(1000px);opacity:0}100%{transform:translateX(0);opacity:1}}
+@keyframes slide-in-left{0%{transform:translateX(-1000px);opacity:0}100%{transform:translateX(0);opacity:1}}
+  
+html, body
+{
+    top:0;
+    left:0;
+    background-color: #212121;
+    color:white;
+    font-family: 'Roboto', sans-serif;
+}
+.container
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 95%;
+}
+.element
+{
+    text-align: center;
+    width: 90%;
+    background-color: #263238;
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+    justify-content: space-around;
+    /*flex-direction: row;*/
+    margin:10px 0 10px 0;
+    border-left: solid #455A64 5px;
+    transition: all 0.1s ease-in-out;
+}
+.element:nth-child(even)
+{
+    animation:slide-in-right .5s cubic-bezier(.25,.46,.45,.94) both
+}
+.element:nth-child(odd)
+{
+    animation:slide-in-left .5s cubic-bezier(.25,.46,.45,.94) both
+}
+.element:hover
+{
+    background-color: #37474F;
+}
+.title
+{
+    font-family: 'Montserrat', sans-serif;
+}
